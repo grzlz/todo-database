@@ -5,7 +5,7 @@ CREATE TABLE usuarios (
     apellido VARCHAR(30) NOT NULL,   
     correo VARCHAR(100) UNIQUE NOT NULL, 
     password VARCHAR (255) NOT NULL,  
-    fecha_registro TIMESTAP DEFAULT CURRENT_TIMESTAMP  
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP  
 );
 
 CREATE TABLE tareas (
@@ -13,5 +13,5 @@ CREATE TABLE tareas (
     id_usuario INT REFERENCES usuarios(id_usuario) ON DELETE CASCADE,          
     titulo VARCHAR(100),
     completado BOOLEAN NOT NULL,
-    fecha_creacion TIMESTAP DEFAULT CURRENT_TIMESTAMP 
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP 
 );
